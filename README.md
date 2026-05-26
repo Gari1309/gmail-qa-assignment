@@ -2,9 +2,7 @@
 
 ## Overview
 
-This repository contains manual and BDD-style test cases for the **Gmail Compose Email** feature, prepared as part of a QA Engineer assignment for **Incubyte**.
-
----
+This repository contains manual and BDD-style test cases for the **Gmail Compose Email** feature
 
 ## Feature Under Test
 
@@ -15,24 +13,6 @@ This repository contains manual and BDD-style test cases for the **Gmail Compose
 | Subject Used | `Incubyte`               |
 | Body Used    | `QA test for Incubyte`   |
 
----
-
-## Repository Structure
-
-```
-gmail-qa-assignment/
-│
-├── README.md
-│
-├── test-cases/
-│   ├── manual/
-│   │   └── gmail_compose_manual_test_cases.md     # Traditional test cases (table format)
-│   │
-│   ├── bdd/
-│   │   └── gmail_compose.feature                  # Gherkin BDD scenarios
-│   │
-│   └── edge-cases/
-│       └── gmail_compose_edge_cases.md            # Boundary, security & edge scenarios
 ```
 
 ---
@@ -68,28 +48,16 @@ gmail-qa-assignment/
 
 ---
 
-## How to Read This Repo
-
-- **Manual Test Cases** → `test-cases/manual/` — Traditional QA table format with Test ID, steps, test data, and expected results. Suitable for Jira/TestRail import.
-- **BDD Scenarios** → `test-cases/bdd/` — Gherkin `.feature` file compatible with Cucumber, Behave, or any BDD framework.
-- **Edge Cases** → `test-cases/edge-cases/` — Boundary value analysis, security injection, session handling, and concurrency tests.
-
----
-
 ## Key Test Scenarios Covered
 
 - ✅ Successful email send (all fields valid)
 - ✅ Send with CC and BCC recipients
 - ✅ Attachment upload and size limit
 - ✅ Draft auto-save and manual save
-- ✅ Keyboard shortcuts (Ctrl+Enter, Ctrl+D)
-- ✅ Rich text formatting
 - ❌ Missing recipient validation
 - ❌ Invalid email format rejection
 - ❌ Subject-less send confirmation dialog
 - ❌ Attachment exceeding 25 MB
-- ❌ XSS injection in Subject field
-- ❌ SQL injection in Subject field
 - ❌ Send while offline
 - ⚠️ Duplicate send on rapid double-click
 - ⚠️ Session timeout handling
